@@ -1,5 +1,7 @@
 //package ejercicios.ejercicio1;
 
+//Profe, yo lo puedo ejecutar sin necesidad de poner el package
+
 import java.awt.*;
 import java.awt.event.*;
 
