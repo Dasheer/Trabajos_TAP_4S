@@ -26,6 +26,17 @@ public class VentanaCListener extends Frame implements ActionListener {
      * Inicializamos los widgets y los metodos al contenedor
      */
 
+    public static boolean isNumber(String nVal) {
+        try {
+            if (nVal != null) {
+                Integer.parseInt(nVal);
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
     public void init() {
         isClicked = false;
         btn_click = new Button("Aceptar");
@@ -62,7 +73,16 @@ public class VentanaCListener extends Frame implements ActionListener {
         if (arg0.getSource() == btn_click) {
             String txt = txt_in.getText();
             txt_result.append(txt + "\n");
+            txt_in.setText("");
+            if (isNumber(txt)) {
+                int nbr = Integer.parseInt(txt);
+                n += nbr;
+            }
 
+            if (txt.equals("SUMAR")) {
+                String suma = n + "";
+                txt_result.append("SUMA: " + suma + "\n");
+            }
         }
 
         if (arg0.getSource() == btn_clear) {
@@ -82,5 +102,5 @@ public class VentanaCListener extends Frame implements ActionListener {
     Label lbl_msg;
     TextArea txt_result;
     boolean isClicked;
-
+    int n;
 }
