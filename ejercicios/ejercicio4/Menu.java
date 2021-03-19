@@ -7,8 +7,6 @@ import java.awt.TextArea;
 import java.awt.event.*;
 import java.awt.*;
 
-import javax.swing.border.Border;
-
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
