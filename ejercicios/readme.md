@@ -13,3 +13,7 @@ Modifica la clase del Ejercicio 2 e implementa una sumadora, que permita ir intr
 # Ejercicio 4
 
 Hacer uso de contenedores y Layouts para la organización de los widgets
+
+# Ejercicio 5
+
+Uso del Canvas y MouseListener
