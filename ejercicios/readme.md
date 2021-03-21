@@ -16,4 +16,10 @@ Hacer uso de contenedores y Layouts para la organización de los widgets
 
 # Ejercicio 5
 
-Uso del Canvas y MouseListener
+Utilizando canvas, realiza una figura de tu preferencia y dibújala en una ventana, aplicando el MouseListener realiza acciones para que se dibuje en diferentes áreas de la ventana
+
+# Ejercicio 6
+Utilizando el Contenedor del Ejercicio 5 implmenta los Listeners de Motion y Key de una ventana
+
+# Ejercicio 7
+Escribir un programa que implemente el juego de Snake (La culebrita), dibujando círculos como manzanas en la pantalla y un cuadrado con un ojo para la culebra
