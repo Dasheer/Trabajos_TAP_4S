@@ -1,8 +1,13 @@
 package ejercicios.bloc_notas;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 import java.awt.FlowLayout;
 import java.awt.event.*;
-import java.util.concurrent.Flow;
 import java.awt.*;
 
 public class BlocNota extends Frame implements ActionListener {
@@ -73,6 +78,9 @@ public class BlocNota extends Frame implements ActionListener {
         this.add(panel_inferior, BorderLayout.SOUTH);
 
         btn_asigColor.addActionListener(this);
+        btn_addCom.addActionListener(this);
+        btn_open.addActionListener(this);
+        btn_save.addActionListener(this);
         btn_exit.addActionListener(this);
 
         // Creación de la ventana
@@ -94,20 +102,26 @@ public class BlocNota extends Frame implements ActionListener {
         setTitle(initTitle);
     }
 
-    public void saveFile(boolean save) {
-        // TODO: acción para guardar archivo
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btn_asigColor) {
+
+        Object btnOnPress = e.getSource();
+
+        if (btnOnPress == btn_asigColor) {
             color = new Colores(txt_out);
             color.setVisible(true);
             color.getForeground();
         }
 
-        if (e.getSource() == btn_exit) {
+        if (btnOnPress == btn_exit) {
             dispose();
+        }
+
+        if (btnOnPress == btn_addCom) {
+            String com = txt_out.getText();
+            String selectText = txt_out.getSelectedText();
+            txt_out.setText(com.replace(selectText, '"' + selectText + '"'));
+            txt_init.setText("Se a\u00f1ido a : " + selectText);
         }
 
     }
