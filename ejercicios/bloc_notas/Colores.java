@@ -2,11 +2,10 @@ package ejercicios.bloc_notas;
 
 import java.awt.event.*;
 
+import javax.swing.BoxLayout;
 import javax.swing.border.Border;
 
 import java.awt.*;
-
-import ejercicios.bloc_notas.BlocNota;
 
 public class Colores extends Frame implements ActionListener {
 
@@ -24,13 +23,11 @@ public class Colores extends Frame implements ActionListener {
 
         // Creación de los paneles superior, central e inferior
         panel_superior = new Panel();
-        // panel_central = new Panel();
         panel_inferior = new Panel();
 
         // Asignación del Layout en los paneles
-        panel_superior.setLayout(new FlowLayout());
-        // panel_central.setLayout(new FlowLayout());
-        panel_inferior.setLayout(new FlowLayout());
+        panel_superior.setLayout(new GridLayout(7, 2));
+        panel_inferior.setLayout(new GridLayout(7, 2));
 
         // Creación de los botones
         blackColor = new Button("Negro");
@@ -41,11 +38,13 @@ public class Colores extends Frame implements ActionListener {
         magentaColor = new Button("Magenta");
         whiteColor = new Button("Blanco");
         cyanColor = new Button("Cyan");
+        darkGrayColor = new Button("Gris Oscuro");
+        lightGrayColor = new Button("Gris Claro");
+        grayColor = new Button("Gris");
+        orangeColor = new Button("Naranja");
+        pinkColor = new Button("Rosado");
+        toAccept = new Button("Aceptar");
 
-        // btn_toAccept = new Button("Aceptar");
-        // btn_toApply = new Button("Aplicar");
-
-        // lbl_msg = new Label("Este es un texto de ejemplo");
         textAreaC = new TextArea();
         textAreaC.setText("Ejemplo");
         textAreaC.getForeground();
@@ -55,63 +54,139 @@ public class Colores extends Frame implements ActionListener {
 
         this.setFont(fontM.FontM(0, 12f));
 
-        setLayout(new BorderLayout());
+        this.setLayout(new GridLayout(7, 2));
 
         // Implementación de lo botones en el panel superior
-        panel_superior.add(blackColor, FlowLayout.LEFT);
-        panel_superior.add(redColor, FlowLayout.CENTER);
-        panel_superior.add(greenColor, FlowLayout.RIGHT);
-        panel_superior.add(yellowColor, FlowLayout.CENTER);
-        this.add(panel_superior, BorderLayout.NORTH);
+        // panel_superior.add(blackColor);
+        // panel_superior.add(redColor);
+        // panel_superior.add(greenColor);
+        // panel_superior.add(yellowColor);
+        // panel_superior.add(darkGrayColor);
+        // panel_superior.add(lightGrayColor);
+        // panel_superior.add(grayColor);
+        // this.add(panel_superior, BorderLayout.EAST);
 
-        // Implementación de lo botones en el panel central
-        // panel_central.add(lbl_msg, FlowLayout.LEFT);
-        // panel_central.add(btn_toAccept, FlowLayout.LEFT);
-        // panel_central.add(textAreaC, BorderLayout.CENTER);
-        // panel_central.add(btn_toApply, FlowLayout.RIGHT);
-        // this.add(panel_central, BorderLayout.CENTER);
+        // // Implementación de los botones en el panel inferior
+        // panel_inferior.add(blueColor);
+        // panel_inferior.add(magentaColor);
+        // panel_inferior.add(whiteColor);
+        // panel_inferior.add(cyanColor);
+        // panel_inferior.add(orangeColor);
+        // panel_inferior.add(pinkColor);
+        // panel_inferior.add(toAccept);
+        // this.add(panel_inferior, BorderLayout.WEST);
 
-        // Implementación de los botones en el panel inferior
-        panel_inferior.add(blueColor, FlowLayout.LEFT);
-        panel_inferior.add(magentaColor, FlowLayout.CENTER);
-        panel_inferior.add(whiteColor, FlowLayout.RIGHT);
-        panel_inferior.add(cyanColor, FlowLayout.CENTER);
-        this.add(panel_inferior, BorderLayout.SOUTH);
+        this.add(blackColor);
+        this.add(redColor);
+        this.add(greenColor);
+        this.add(yellowColor);
+        this.add(darkGrayColor);
+        this.add(lightGrayColor);
+        this.add(grayColor);
+        this.add(blueColor);
+        this.add(magentaColor);
+        this.add(whiteColor);
+        this.add(cyanColor);
+        this.add(orangeColor);
+        this.add(pinkColor);
+        this.add(toAccept);
 
         // Creación de la ventana
         this.setLocationRelativeTo(null);
-        this.setSize(500, 350);
+        this.setSize(400, 200);
         this.setTitle("Colores");
         this.setResizable(false);
         this.setVisible(true);
-        /*
-         * TextColor tBlackColor = new TextColor(Color.BLACK, textAreaC); TextColor
-         * tRedColor = new TextColor(Color.RED, textAreaC); TextColor tBlueColor = new
-         * TextColor(Color.BLUE, textAreaC);
-         */
 
         blackColor.addActionListener(this);
         redColor.addActionListener(this);
+        greenColor.addActionListener(this);
+        yellowColor.addActionListener(this);
+        darkGrayColor.addActionListener(this);
+        lightGrayColor.addActionListener(this);
+        grayColor.addActionListener(this);
         blueColor.addActionListener(this);
-
-        // ButtonAssig btn_toAceptAssig = new ButtonAssig(null, btn_toAccept,
-        // textAreaC);
-        // ButtonAssig btn_toApplyAssig = new ButtonAssig(getForeground(), btn_toApply,
-        // textAreaC);
-
-        // btn_toAccept.addActionListener(btn_toAceptAssig);
-        // btn_toApply.addActionListener(btn_toApplyAssig);
-        // textAreaC.addActionListener(btn_toApplyAssig);
+        magentaColor.addActionListener(this);
+        whiteColor.addActionListener(this);
+        cyanColor.addActionListener(this);
+        orangeColor.addActionListener(this);
+        pinkColor.addActionListener(this);
+        toAccept.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        // Se crea un objeto que es el encargado de obtener el resultado del ActionEvent
         Object btnOnpress = e.getSource();
 
+        // Asignación del color negro
+        if (btnOnpress == blackColor) {
+            textAreaC.setForeground(Color.BLACK);
+        }
+
+        // Asignación del color rojo
+        if (btnOnpress == redColor) {
+            textAreaC.setForeground(Color.RED);
+        }
+
+        if (btnOnpress == greenColor) {
+            textAreaC.setForeground(Color.GREEN);
+        }
+
+        // Asignación del color amarillo
+        if (btnOnpress == yellowColor) {
+            textAreaC.setForeground(Color.YELLOW);
+        }
+
+        // Asignación del color gris oscuro
+        if (btnOnpress == darkGrayColor) {
+            textAreaC.setForeground(Color.DARK_GRAY);
+        }
+
+        // Asignación del color gris claro
+        if (btnOnpress == lightGrayColor) {
+            textAreaC.setForeground(Color.LIGHT_GRAY);
+        }
+
+        // Asignación del color gris
+        if (btnOnpress == grayColor) {
+            textAreaC.setForeground(Color.GRAY);
+        }
+
+        // Asignación del color azul
         if (btnOnpress == blueColor) {
             textAreaC.setForeground(Color.BLUE);
-            setVisible(false);
+        }
+
+        // Asignación del color magenta
+        if (btnOnpress == magentaColor) {
+            textAreaC.setForeground(Color.MAGENTA);
+        }
+
+        // Asignación del color blanco
+        if (btnOnpress == whiteColor) {
+            textAreaC.setForeground(Color.WHITE);
+        }
+
+        // Asignación del color cyan
+        if (btnOnpress == cyanColor) {
+            textAreaC.setForeground(Color.CYAN);
+        }
+
+        // Asignación del color naranaja
+        if (btnOnpress == orangeColor) {
+            textAreaC.setForeground(Color.ORANGE);
+        }
+
+        // Asignación del color rosado
+        if (btnOnpress == pinkColor) {
+            textAreaC.setForeground(Color.PINK);
+        }
+
+        // Asignación del boton aceptar, la cual hace que la ventana se cierre
+        if (btnOnpress == toAccept) {
+            dispose();
         }
 
     }
@@ -120,8 +195,8 @@ public class Colores extends Frame implements ActionListener {
         // todo
     }
 
+    // Creacion de los widgets
     private Panel panel_superior;
-    private Panel panel_central;
     private Panel panel_inferior;
 
     private Button blackColor;
@@ -132,56 +207,16 @@ public class Colores extends Frame implements ActionListener {
     private Button magentaColor;
     private Button whiteColor;
     private Button cyanColor;
-
-    // private Button btn_toAccept;
-    // private Button btn_toApply;
-
-    // private Label lbl_msg;
+    private Button darkGrayColor;
+    private Button lightGrayColor;
+    private Button grayColor;
+    private Button orangeColor;
+    private Button pinkColor;
+    private Button toAccept;
 
     private TextArea textAreaC;
 
     private Fonts fontM;
-
-    /*
-     * private class TextColor implements ActionListener {
-     * 
-     * public TextColor(Color color, TextArea textAreaTC) { textColor =
-     * textAreaColorAssig = color; txtArea = textAreaTC; }
-     * 
-     * 
-     * 
-     * private Color textColor; private Label lbl_text; private TextArea txtArea;
-     * 
-     * }
-     */
-    // private class ButtonAssig implements ActionListener {
-
-    // public ButtonAssig(Color textColor, Button btn, TextArea textAreaB) {
-    // tColor = textColor;
-    // btn_press = btn;
-    // txtArea = textAreaB;
-    // }
-
-    // @Override
-    // public void actionPerformed(ActionEvent e) {
-
-    // if (e.getSource() == btn_toAccept) {
-    // dispose();
-    // }
-
-    // txtArea.setForeground(tColor);
-
-    // /*
-    // * if (e.getSource() == btn_toApply) { textAreaC.setForeground(tColor);
-    // * setVisible(false); }
-    // */
-
-    // }
-
-    // private Color tColor;
-    // private Button btn_press;
-    // private TextArea txtArea;
-    // }
 
     public void setTextAreaC(TextArea textAreaC) {
         this.textAreaC = textAreaC;

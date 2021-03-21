@@ -77,6 +77,7 @@ public class BlocNota extends Frame implements ActionListener {
 
         // Creación de la ventana
         this.setSize(500, 350);
+        this.setLocationRelativeTo(null);
         changeTitle();
         this.setVisible(true);
     }
