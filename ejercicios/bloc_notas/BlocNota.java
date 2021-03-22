@@ -143,10 +143,10 @@ public class BlocNota extends Frame implements ActionListener {
             dispose();
         }
 
-        if (e.getSource() == btn_addCom) {
-            if ((txt_out.getText() != null) && (txt_out.getSelectedText() != "")) {
-                String selectText = txt_out.getSelectedText();
-                String com = txt_out.getText();
+        if (btnOnPress == btn_addCom) {
+            String selectText = txt_out.getSelectedText();
+            String com = txt_out.getText();
+            if (selectText.equals("")) {
                 txt_out.setText(com.replace(selectText, '"' + selectText + '"'));
                 txt_init.setText("Se a\u00f1adio comillas a : " + selectText);
             } else {

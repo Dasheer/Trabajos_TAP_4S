@@ -28,7 +28,8 @@ public class Fonts extends Frame implements ActionListener {
         panel_inferior.setLayout(new FlowLayout());
 
         //
-        String tamFont[] = { "Tamanio", "7", "9", "10", "12", "14", "16" };
+        String tamFont[] = { "Tamanio", "8", "9", "10", "11", "12", "14", "16", "18", "20", "22", "24", "26", "28",
+                "36" };
 
         selectFont = new JComboBox(tamFont);
 
@@ -66,9 +67,35 @@ public class Fonts extends Frame implements ActionListener {
 
         if (btnPress == selectFont) {
             if (selectFont.getSelectedIndex() == 1) {
-                textAreaF.setFont(new Font("Arial", 0, 7));
+                textAreaF.setFont(new Font("Arial", 0, 8));
             } else if (selectFont.getSelectedIndex() == 2) {
                 textAreaF.setFont(new Font("Arial", 0, 9));
+            } else if (selectFont.getSelectedIndex() == 3) {
+                textAreaF.setFont(new Font("Arial", 0, 10));
+            } else if (selectFont.getSelectedIndex() == 4) {
+                textAreaF.setFont(new Font("Arial", 0, 11));
+            } else if (selectFont.getSelectedIndex() == 5) {
+                textAreaF.setFont(new Font("Arial", 0, 12));
+            } else if (selectFont.getSelectedIndex() == 6) {
+                textAreaF.setFont(new Font("Arial", 0, 14));
+            } else if (selectFont.getSelectedIndex() == 7) {
+                textAreaF.setFont(new Font("Arial", 0, 16));
+            } else if (selectFont.getSelectedIndex() == 8) {
+                textAreaF.setFont(new Font("Arial", 0, 18));
+            } else if (selectFont.getSelectedIndex() == 9) {
+                textAreaF.setFont(new Font("Arial", 0, 20));
+            } else if (selectFont.getSelectedIndex() == 10) {
+                textAreaF.setFont(new Font("Arial", 0, 22));
+            } else if (selectFont.getSelectedIndex() == 11) {
+                textAreaF.setFont(new Font("Arial", 0, 24));
+            } else if (selectFont.getSelectedIndex() == 12) {
+                textAreaF.setFont(new Font("Arial", 0, 26));
+            } else if (selectFont.getSelectedIndex() == 13) {
+                textAreaF.setFont(new Font("Arial", 0, 28));
+            } else if (selectFont.getSelectedIndex() == 14) {
+                textAreaF.setFont(new Font("Arial", 0, 36));
+            } else {
+                // TODO:
             }
         }
     }
