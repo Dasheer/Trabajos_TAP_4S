@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-
 import java.awt.FlowLayout;
 import java.awt.event.*;
 import java.awt.*;
@@ -102,6 +101,36 @@ public class BlocNota extends Frame implements ActionListener {
         setTitle(initTitle);
     }
 
+    // Método que abre el archivo selecionado
+    public String OpenFile(File file) {
+        String document = "";
+        try {
+            files_input = new FileInputStream(file);
+            int op;
+            while ((op = files_input.read()) != -1) {
+                char character = (char) op;
+                document += character;
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return document;
+    }
+
+    // Método que guardo el archivo
+    public String SaveFile(File file, String document) {
+        String msj = null;
+        try {
+            files_output = new FileOutputStream(file);
+            byte[] txt = document.getBytes();
+            files_output.write(txt);
+            msj = "Archivo guardado";
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return msj;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -117,11 +146,58 @@ public class BlocNota extends Frame implements ActionListener {
             dispose();
         }
 
-        if (btnOnPress == btn_addCom) {
-            String com = txt_out.getText();
-            String selectText = txt_out.getSelectedText();
-            txt_out.setText(com.replace(selectText, '"' + selectText + '"'));
-            txt_init.setText("Se a\u00f1ido a : " + selectText);
+        if ((txt_out.getSelectedText().equals("")) && txt_out.getText() != null) {
+            if (e.getSource() == btn_addCom) {
+                String selectText = txt_out.getSelectedText();
+                String com = txt_out.getText();
+                txt_out.setText(com.replace(selectText, '"' + selectText + '"'));
+                txt_init.setText("Se a\u00f1ido a : " + selectText);
+            }
+        } else {
+            txt_init.setText("No hay texto seleccionado");
+        }
+
+        if (btnOnPress == btn_open) {
+            if (selecction.showDialog(null, "Abrir") == JFileChooser.APPROVE_OPTION) {
+                file = selecction.getSelectedFile();
+                title_aux = "";
+                String initTitle = ": Bloc de notas";
+                if (file.canRead()) {
+                    if (file.getName().endsWith("txt")) {
+                        String documentOpen = OpenFile(file);
+                        txt_out.setText(documentOpen);
+                        initTitle = file.getName() + initTitle;
+                        setTitle(initTitle);
+                        txt_init.setText(file.getName() + " se ha abierto");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Archivo no compatible");
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Archivo no compatible.");
+            }
+        }
+
+        if (btnOnPress == btn_save) {
+            if (selecction.showDialog(null, "Guardar") == JFileChooser.APPROVE_OPTION) {
+                file = selecction.getSelectedFile();
+                title_aux = "";
+                String initTitle = ": Bloc de notas";
+                if (file.getName().endsWith("txt")) {
+                    String documentSave = txt_out.getText();
+                    String msj = SaveFile(file, documentSave);
+                    if (msj != null) {
+                        JOptionPane.showMessageDialog(null, msj);
+                        initTitle = file.getName() + initTitle;
+                        setTitle(initTitle);
+                        txt_init.setText(file.getName() + " se ha abierto");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Archivo no compatible");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Guardar documento");
+                }
+            }
         }
 
     }
@@ -147,6 +223,10 @@ public class BlocNota extends Frame implements ActionListener {
 
     private Fonts fontM;
     private String title_aux;
+    private JFileChooser selecction = new JFileChooser();
+    private File file;
+    private FileInputStream files_input;
+    private FileOutputStream files_output;
 
     private Colores color;
 }
