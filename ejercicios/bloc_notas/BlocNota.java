@@ -52,10 +52,6 @@ public class BlocNota extends Frame implements ActionListener {
         btn_exit = new Button("Salir");
         btn_info = new Button("Acerca de BN");
 
-        fontM = new Fonts();
-
-        this.setFont(fontM.FontM(1, 12f));
-
         setLayout(new BorderLayout());
 
         // Implementación de lo botones en el panel superior
@@ -81,6 +77,7 @@ public class BlocNota extends Frame implements ActionListener {
         btn_open.addActionListener(this);
         btn_save.addActionListener(this);
         btn_exit.addActionListener(this);
+        btn_tamFont.addActionListener(this);
 
         // Creación de la ventana
         this.setSize(500, 350);
@@ -146,15 +143,15 @@ public class BlocNota extends Frame implements ActionListener {
             dispose();
         }
 
-        if ((txt_out.getSelectedText().equals("")) && txt_out.getText() != null) {
-            if (e.getSource() == btn_addCom) {
+        if (e.getSource() == btn_addCom) {
+            if ((txt_out.getText() != null) && (txt_out.getSelectedText() != "")) {
                 String selectText = txt_out.getSelectedText();
                 String com = txt_out.getText();
                 txt_out.setText(com.replace(selectText, '"' + selectText + '"'));
-                txt_init.setText("Se a\u00f1ido a : " + selectText);
+                txt_init.setText("Se a\u00f1adio comillas a : " + selectText);
+            } else {
+                txt_init.setText("No hay texto seleccionado");
             }
-        } else {
-            txt_init.setText("No hay texto seleccionado");
         }
 
         if (btnOnPress == btn_open) {
@@ -200,6 +197,12 @@ public class BlocNota extends Frame implements ActionListener {
             }
         }
 
+        if (e.getSource() == btn_tamFont) {
+            fontM = new Fonts(txt_out);
+            fontM.getFont();
+            // this.setFont(fontM.FontM(1, 12f));
+            fontM.setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
