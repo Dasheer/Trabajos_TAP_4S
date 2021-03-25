@@ -50,31 +50,11 @@ public class Colores extends Frame implements ActionListener {
         textAreaC.getForeground();
         textAreaC.setEditable(false);
 
-        fontM = new Fonts();
+        // fontM = new Fonts();
 
-        this.setFont(fontM.FontM(0, 12f));
+        // this.setFont(fontM.FontM(0, 12f));
 
         this.setLayout(new GridLayout(7, 2));
-
-        // Implementación de lo botones en el panel superior
-        // panel_superior.add(blackColor);
-        // panel_superior.add(redColor);
-        // panel_superior.add(greenColor);
-        // panel_superior.add(yellowColor);
-        // panel_superior.add(darkGrayColor);
-        // panel_superior.add(lightGrayColor);
-        // panel_superior.add(grayColor);
-        // this.add(panel_superior, BorderLayout.EAST);
-
-        // // Implementación de los botones en el panel inferior
-        // panel_inferior.add(blueColor);
-        // panel_inferior.add(magentaColor);
-        // panel_inferior.add(whiteColor);
-        // panel_inferior.add(cyanColor);
-        // panel_inferior.add(orangeColor);
-        // panel_inferior.add(pinkColor);
-        // panel_inferior.add(toAccept);
-        // this.add(panel_inferior, BorderLayout.WEST);
 
         this.add(blackColor);
         this.add(redColor);
@@ -123,6 +103,7 @@ public class Colores extends Frame implements ActionListener {
         // Asignación del color negro
         if (btnOnpress == blackColor) {
             textAreaC.setForeground(Color.BLACK);
+            textAreaC.setBackground(Color.WHITE);
         }
 
         // Asignación del color rojo
@@ -167,6 +148,7 @@ public class Colores extends Frame implements ActionListener {
         // Asignación del color blanco
         if (btnOnpress == whiteColor) {
             textAreaC.setForeground(Color.WHITE);
+            textAreaC.setBackground(Color.BLACK);
         }
 
         // Asignación del color cyan

@@ -74,10 +74,11 @@ public class BlocNota extends Frame implements ActionListener {
 
         btn_asigColor.addActionListener(this);
         btn_addCom.addActionListener(this);
+        btn_tamFont.addActionListener(this);
         btn_open.addActionListener(this);
         btn_save.addActionListener(this);
         btn_exit.addActionListener(this);
-        btn_tamFont.addActionListener(this);
+        btn_info.addActionListener(this);
 
         // Creación de la ventana
         this.setSize(500, 350);
@@ -133,6 +134,7 @@ public class BlocNota extends Frame implements ActionListener {
 
         Object btnOnPress = e.getSource();
 
+        // Implementacion del botón de Asignacion de color de texto
         if (btnOnPress == btn_asigColor) {
             color = new Colores(txt_out);
             color.setVisible(true);
@@ -143,6 +145,7 @@ public class BlocNota extends Frame implements ActionListener {
             dispose();
         }
 
+        // Implementacion de las comillas - Contiene un bug
         if (btnOnPress == btn_addCom) {
             String selectText = txt_out.getSelectedText();
             String com = txt_out.getText();
@@ -154,6 +157,7 @@ public class BlocNota extends Frame implements ActionListener {
             }
         }
 
+        // Implementación del boton Abrir
         if (btnOnPress == btn_open) {
             if (selecction.showDialog(null, "Abrir") == JFileChooser.APPROVE_OPTION) {
                 file = selecction.getSelectedFile();
@@ -175,6 +179,7 @@ public class BlocNota extends Frame implements ActionListener {
             }
         }
 
+        // Implementacion del botron Guardar
         if (btnOnPress == btn_save) {
             if (selecction.showDialog(null, "Guardar") == JFileChooser.APPROVE_OPTION) {
                 file = selecction.getSelectedFile();
@@ -197,11 +202,17 @@ public class BlocNota extends Frame implements ActionListener {
             }
         }
 
-        if (e.getSource() == btn_tamFont) {
+        // Implementación del botón de Asignación de tamaño de fuente
+        if (btnOnPress == btn_tamFont) {
             fontM = new Fonts(txt_out);
             fontM.getFont();
-            // this.setFont(fontM.FontM(1, 12f));
             fontM.setVisible(true);
+        }
+
+        // Implementación del botón Información
+        if (btnOnPress == btn_info) {
+            about = new About();
+            about.setVisible(true);
         }
     }
 
@@ -232,4 +243,5 @@ public class BlocNota extends Frame implements ActionListener {
     private FileOutputStream files_output;
 
     private Colores color;
+    private About about;
 }

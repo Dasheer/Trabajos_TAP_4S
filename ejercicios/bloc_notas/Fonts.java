@@ -46,7 +46,7 @@ public class Fonts extends Frame implements ActionListener {
         panel_inferior.add(btn_toAcept, FlowLayout.LEFT);
         this.add(panel_inferior, BorderLayout.SOUTH);
 
-        this.setSize(200, 250);
+        this.setSize(200, 200);
         this.setTitle("Fuentes");
         this.setVisible(true);
         this.setLocationRelativeTo(null);
@@ -101,7 +101,6 @@ public class Fonts extends Frame implements ActionListener {
     }
 
     private Button btn_toAcept;;
-    // private Button subtractFont;
     private TextArea textAreaF;
     private JComboBox selectFont;
     private Panel panel_superior;
