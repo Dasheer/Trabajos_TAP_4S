@@ -1,4 +1,4 @@
-package ejercicios.ejercicio5;
+package Ejercicios.Java.ejercicio5;
 
 import java.awt.*;
 

@@ -1,4 +1,4 @@
-package ejercicios.bloc_notas;
+package Ejercicios.Java.bloc_notas;
 
 import java.awt.*;
 import java.awt.Font;

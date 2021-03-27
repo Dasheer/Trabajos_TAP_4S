@@ -1,21 +1,23 @@
-package ejercicios.ejercicio7;
+package Ejercicios.Java.ejercicio6;
 
 import java.awt.Frame;
 import java.awt.event.*;
 
 import ejercicios.ejercicio5.Contenedor;
 
-public class Snake extends Frame implements MouseListener, MouseMotionListener, KeyListener {
+public class Pantalla extends Frame implements MouseListener, MouseMotionListener, KeyListener {
 
     /**
      *
      */
     private static final long serialVersionUID = 1L;
-
     private Contenedor obj_pintable;
 
-    public Snake() {
+    public Pantalla() {
+        initComponents();
+    }
 
+    public void initComponents() {
         this.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
@@ -32,8 +34,8 @@ public class Snake extends Frame implements MouseListener, MouseMotionListener, 
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        Snake sk = new Snake();
+    public static void main(String args[]) {
+        Pantalla p = new Pantalla();
     }
 
     @Override
