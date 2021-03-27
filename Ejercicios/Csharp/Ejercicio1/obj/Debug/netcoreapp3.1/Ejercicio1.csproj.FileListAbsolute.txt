@@ -1,0 +1,15 @@
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\bin\Debug\netcoreapp3.1\Ejercicio1.exe
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\bin\Debug\netcoreapp3.1\Ejercicio1.deps.json
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\bin\Debug\netcoreapp3.1\Ejercicio1.runtimeconfig.json
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\bin\Debug\netcoreapp3.1\Ejercicio1.runtimeconfig.dev.json
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\bin\Debug\netcoreapp3.1\Ejercicio1.dll
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\bin\Debug\netcoreapp3.1\Ejercicio1.pdb
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.csprojAssemblyReference.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.Form1.resources
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.csproj.GenerateResource.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.AssemblyInfoInputs.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.AssemblyInfo.cs
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.csproj.CoreCompileInputs.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.dll
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.pdb
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio1\obj\Debug\netcoreapp3.1\Ejercicio1.genruntimeconfig.cache
