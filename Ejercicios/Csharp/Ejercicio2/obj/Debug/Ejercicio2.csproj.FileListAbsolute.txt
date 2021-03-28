@@ -1,0 +1,10 @@
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\bin\Debug\Ejercicio2.exe.config
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\bin\Debug\Ejercicio2.exe
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\bin\Debug\Ejercicio2.pdb
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.csprojAssemblyReference.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.Form1.resources
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.Properties.Resources.resources
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.csproj.GenerateResource.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.csproj.CoreCompileInputs.cache
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.exe
+C:\Proyectos\Trabajos_TAP_4S\Ejercicios\Csharp\Ejercicio2\obj\Debug\Ejercicio2.pdb
