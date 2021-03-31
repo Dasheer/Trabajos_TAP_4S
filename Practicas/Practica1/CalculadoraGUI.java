@@ -1,7 +1,9 @@
-package Practicas.Practica1.Calculadora.java;
+package Practicas.Practica1;
 
 import java.awt.*;
 import java.awt.event.*;
+
+import javax.swing.BoxLayout;
 
 public class CalculadoraGUI extends Frame implements ActionListener {
 
@@ -16,12 +18,19 @@ public class CalculadoraGUI extends Frame implements ActionListener {
 
     // Iniciación de componentes
     public void initComponents() {
-        //
+        // Contruccion de la ventana
+        this.setSize(400, 500);
+        this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.X_AXIS));
+        this.pack();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setTitle("Calculadora");
     }
 
     // Creación del panel superior
     public void topPanel() {
         //
+
     }
 
     // Creación del panel inferior
