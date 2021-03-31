@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.BoxLayout;
+import javax.swing.border.Border;
 
 public class CalculadoraGUI extends Frame implements ActionListener {
 
@@ -30,7 +31,15 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     // Creación del panel superior
     public void topPanel() {
         //
+        topPanel = new Panel();
+        topPanel.setLayout(new GridLayout(5, 4, 8, 8));
 
+        textOperation = new Label("0");
+        textResult = new Label("0");
+
+        topPanel.add(textOperation, BorderLayout.NORTH);
+        topPanel.add(textResult, BorderLayout.SOUTH);
+        this.add(topPanel, BorderLayout.NORTH);
     }
 
     // Creación del panel inferior
