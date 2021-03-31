@@ -28,6 +28,9 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     private Panel topPanel;
     private Panel bottomPanel;
 
+    private Label textOperation;
+    private Label textResult;
+
     private Button numberOne;
     private Button numberTwo;
     private Button numberThree;
