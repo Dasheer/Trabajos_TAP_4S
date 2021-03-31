@@ -14,7 +14,18 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         initComponents();
     }
 
+    // Iniciación de componentes
     public void initComponents() {
+        //
+    }
+
+    // Creación del panel superior
+    public void topPanel() {
+        //
+    }
+
+    // Creación del panel inferior
+    public void bottomPanel() {
         //
     }
 
@@ -22,6 +33,10 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
 
+    }
+
+    public static void main(String[] args) {
+        //
     }
 
     // Creación de los widgets
