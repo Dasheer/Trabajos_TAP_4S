@@ -44,7 +44,9 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         textResult = new Label("0");
 
         topPanel.add(textOperation, BorderLayout.NORTH);
+        textOperation.setAlignment(Label.RIGHT);
         topPanel.add(textResult, BorderLayout.SOUTH);
+        textResult.setAlignment(Label.RIGHT);
     }
 
     // Creación del panel inferior
