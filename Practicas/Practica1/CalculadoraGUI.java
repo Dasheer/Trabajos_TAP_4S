@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.BoxLayout;
-import javax.swing.border.Border;
 
 public class CalculadoraGUI extends Frame implements ActionListener {
 
@@ -21,39 +20,54 @@ public class CalculadoraGUI extends Frame implements ActionListener {
 
     // Iniciación de componentes
     public void initComponents() {
+        this.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
 
+        fontM = new Fonts();
+        this.setFont(fontM.FontM(0, 18f));
+        this.setLayout(new BorderLayout());
         this.add(topPanel, BorderLayout.NORTH);
-        this.add(bottomPanel, BorderLayout.SOUTH);
+        this.add(bottomPanel);
 
         // Contruccion de la ventana
-        this.setSize(400, 500);
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        this.pack();
+        this.setSize(500, 400);
         this.setVisible(true);
-        this.setLocationRelativeTo(null);
+        this.setResizable(false);
         this.setTitle("Calculadora");
+        this.setLocationRelativeTo(null);
     }
 
     // Creación del panel superior
     public void topPanel() {
         //
+
+        fontM = new Fonts();
+
         topPanel = new Panel();
         topPanel.setLayout(new BorderLayout());
+        topPanel.setBackground(Color.decode("#F4FDFB"));
 
         textOperation = new Label("0");
         textResult = new Label("0");
 
         topPanel.add(textOperation, BorderLayout.NORTH);
         textOperation.setAlignment(Label.RIGHT);
+        textOperation.setFont(fontM.FontM(0, 12f));
+
         topPanel.add(textResult, BorderLayout.SOUTH);
         textResult.setAlignment(Label.RIGHT);
+        textResult.setFont(fontM.FontM(0, 16f));
+
     }
 
     // Creación del panel inferior
     public void bottomPanel() {
         //
         bottomPanel = new Panel();
-        bottomPanel.setLayout(new GridLayout(5, 4, 8, 8));
+        bottomPanel.setLayout(new GridLayout(5, 4, 5, 5));
 
         numberOne = new Button("1");
         numberTwo = new Button("2");
@@ -69,7 +83,7 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         buttonPoint = new Button(".");
         buttonEqual = new Button("=");
         buttonPercentage = new Button("%");
-        buttonAllClear = new Button("CA");
+        buttonAllClear = new Button("AC");
         buttonLeftParenthesis = new Button("(");
         buttonRightParenthesis = new Button(")");
         buttonDivision = new Button("/");
@@ -106,7 +120,7 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        CalculadoraGUI calculadoraGUI = new CalculadoraGUI();
+        new CalculadoraGUI();
     }
 
     // Creación de los widgets
@@ -137,5 +151,7 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     private Button buttonMultiplication;
     private Button buttonAdd;
     private Button buttonSubtract;
+
+    private Fonts fontM;
 
 }
