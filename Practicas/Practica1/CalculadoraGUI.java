@@ -2,8 +2,7 @@ package Practicas.Practica1;
 
 import java.awt.*;
 import java.awt.event.*;
-
-import javax.swing.BoxLayout;
+import javax.swing.*;
 
 public class CalculadoraGUI extends Frame implements ActionListener {
 
@@ -59,7 +58,7 @@ public class CalculadoraGUI extends Frame implements ActionListener {
 
         topPanel.add(textResult, BorderLayout.SOUTH);
         textResult.setAlignment(Label.RIGHT);
-        textResult.setFont(fontM.FontM(0, 16f));
+        textResult.setFont(fontM.FontM(0, 18f));
 
     }
 
@@ -111,6 +110,24 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         bottomPanel.add(buttonPoint);
         bottomPanel.add(buttonEqual);
         bottomPanel.add(buttonAdd);
+
+        button(numberOne);
+        button(numberTwo);
+
+    }
+
+    public Button button(Button buttonType) {
+        buttonType.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent e) {
+                buttonType.setBackground(Color.CYAN);
+            }
+
+            public void mouseExited(MouseEvent e) {
+                buttonType.setBackground(UIManager.getColor("control"));
+            }
+        });
+
+        return buttonType;
     }
 
     @Override
