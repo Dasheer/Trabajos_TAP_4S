@@ -1,93 +1,34 @@
 package Proyecto.Juego;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.WindowListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
+import javax.swing.event.*;
 
-public class TicTacToe extends Frame implements ActionListener {
+public class TicTacToe extends JFrame implements ActionListener {
 
     public TicTacToe() {
-        menu();
-        game();
         initComponents();
     }
 
     public void initComponents() {
-        this.setSize(500, 500);
         this.setTitle("Tic Tac Toe");
-        this.setUndecorated(true);
-        this.setVisible(true);
-        this.setResizable(false);
+        this.setSize(500, 500);
         this.setLocationRelativeTo(null);
-
-        this.setLayout(new BorderLayout());
-        this.add(buttons);
-
-        exitG.addActionListener(this);
-
-    }
-
-    public void menu() {
-        menuGame = new MenuBar();
-        main = new Menu("Juego");
-        rebootG = new MenuItem("Reiniciar");
-        exitG = new MenuItem("Salir");
-
-        setMenuBar(menuGame);
-        menuGame.add(main);
-        main.add(rebootG);
-        main.addSeparator();
-        main.add(exitG);
-
-    }
-
-    public void game() {
-        buttons = new Panel();
-        buttons.setLayout(new GridLayout(3, 3, 8, 8));
-        createButton(buttonUpperLeft, "");
-        createButton(buttonTopUp, "");
-        createButton(buttonUpperRight, "");
-        createButton(buttonLeft, "");
-        createButton(buttonCenter, "");
-        createButton(buttonRight, "");
-        createButton(buttonLowerLeft, "");
-        createButton(buttonLowerDown, "");
-        createButton(buttonLowerRight, "");
-    }
-
-    private void createButton(Button b, String s) {
-        b = new Button(s);
-        buttons.add(b);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Object onPress = e.getSource();
-
-        if (onPress == exitG) {
-            dispose();
-        }
+        // TODO Auto-generated method stub
 
     }
 
     public static void main(String[] args) {
         new TicTacToe();
     }
-
-    private MenuBar menuGame;
-    private Menu main;
-    private MenuItem rebootG;
-    private MenuItem exitG;
-
-    private Panel buttons;
-    private Button buttonUpperLeft;
-    private Button buttonTopUp;
-    private Button buttonUpperRight;
-    private Button buttonLeft;
-    private Button buttonCenter;
-    private Button buttonRight;
-    private Button buttonLowerLeft;
-    private Button buttonLowerDown;
-    private Button buttonLowerRight;
 
 }
