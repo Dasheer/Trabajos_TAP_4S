@@ -1,0 +1,10 @@
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\bin\Debug\Practica1.exe.config
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\bin\Debug\Practica1.exe
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\bin\Debug\Practica1.pdb
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.csprojAssemblyReference.cache
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.Calculadora.resources
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.Properties.Resources.resources
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.csproj.GenerateResource.cache
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.csproj.CoreCompileInputs.cache
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.exe
+C:\Proyectos\Trabajos_TAP_4S\Practicas\Csharp\Practica1\obj\Debug\Practica1.pdb

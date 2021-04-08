@@ -19,16 +19,25 @@ namespace Ejercicio2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(isCliclekd)
-            {
-                btn_press.Text = "Presioname";
-            }else
-            {
-                btn_press.Text = "Presionado";
-            }
+            String texto = txtBox_writter.Text;
+            txt_output.AppendText(texto + "\r\n");
+            txt_output.Enabled =false;
+            txtBox_writter.Text = "";
+            txt_output.ForeColor = Color.Black;
             isCliclekd = !isCliclekd;
         }
 
-        bool isCliclekd;
+        bool isCliclekd = false;
+
+        private void lbl_text_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_output.Text = "";
+            txtBox_writter.Text = "";
+        }
     }
 }
