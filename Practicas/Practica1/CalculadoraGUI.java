@@ -73,15 +73,10 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         topPanel.setBackground(Color.decode("#F4FDFB"));
 
         textOperation = new Label("0");
-        textResult = new Label("0");
 
         topPanel.add(textOperation, BorderLayout.NORTH);
         textOperation.setAlignment(Label.RIGHT);
-        textOperation.setFont(fontM.FontM(0, 12f));
-
-        topPanel.add(textResult, BorderLayout.SOUTH);
-        textResult.setAlignment(Label.RIGHT);
-        textResult.setFont(fontM.FontM(0, 18f));
+        textOperation.setFont(fontM.FontM(1, 20f));
 
     }
 
@@ -91,27 +86,27 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         bottomPanel = new Panel();
         bottomPanel.setLayout(new GridLayout(5, 4, 5, 5));
 
-        numberOne = new Button("1");
-        numberTwo = new Button("2");
-        numberThree = new Button("3");
-        numberFour = new Button("4");
-        numberFive = new Button("5");
-        numberSix = new Button("6");
-        numberSeven = new Button("7");
-        numberEight = new Button("8");
-        numberNine = new Button("9");
-        numberZero = new Button("0");
+        numberOne = new Button("\u0031");
+        numberTwo = new Button("\u0032");
+        numberThree = new Button("\u0033");
+        numberFour = new Button("\u0034");
+        numberFive = new Button("\u0035");
+        numberSix = new Button("\u0036");
+        numberSeven = new Button("\u0037");
+        numberEight = new Button("\u0038");
+        numberNine = new Button("\u0039");
+        numberZero = new Button("\u0030");
 
         buttonPoint = new Button(".");
-        buttonEqual = new Button("=");
-        buttonPercentage = new Button("%");
+        buttonEqual = new Button("\u003D");
+        buttonPercentage = new Button("\u0025");
         buttonAllClear = new Button("AC");
         buttonLeftParenthesis = new Button("(");
         buttonRightParenthesis = new Button(")");
-        buttonDivision = new Button("/");
-        buttonMultiplication = new Button("x");
-        buttonAdd = new Button("+");
-        buttonSubtract = new Button("-");
+        buttonDivision = new Button("\u00f7");
+        buttonMultiplication = new Button("\u00d7");
+        buttonAdd = new Button("\u002B");
+        buttonSubtract = new Button("\u2212");
 
         bottomPanel.add(buttonLeftParenthesis);
         bottomPanel.add(buttonRightParenthesis);
@@ -136,17 +131,27 @@ public class CalculadoraGUI extends Frame implements ActionListener {
 
         button(numberOne);
         button(numberTwo);
+        button(numberThree);
+        button(numberFour);
+        button(numberFive);
+        button(numberSix);
+        button(numberSeven);
+        button(numberEight);
+        button(numberNine);
+        button(numberZero);
 
     }
 
     public Button button(Button buttonType) {
         buttonType.addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent e) {
-                buttonType.setBackground(Color.CYAN);
+                buttonType.setBackground(Color.decode("#96a8a0"));
+                buttonType.setForeground(Color.WHITE);
             }
 
             public void mouseExited(MouseEvent e) {
                 buttonType.setBackground(UIManager.getColor("control"));
+                buttonType.setForeground(Color.BLACK);
             }
         });
 
@@ -163,6 +168,17 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         } else {
             textOperation.setText(number);
         }
+    }
+
+    public String quitZero(float result) {
+        String returns = "";
+
+        returns = Float.toString(result);
+        if (result % 1 == 0) {
+            returns = returns.substring(0, returns.length() - 2);
+        }
+
+        return returns;
     }
 
     @Override
@@ -210,21 +226,51 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         }
 
         // Implementación de botones de operaciones
+
+        // Implementación para añadir un solo punto
+        // Método que distingue si existe un punto, solo sea aquel que este en la
+        // operación
         if (buttonPress == buttonPoint) {
-            addDigit(".");
+            if (!(textOperation.getText().contains("."))) {
+                addDigit(".");
+            }
         }
 
-        // if(buttonPress == buttonEqual) {
-        // addDigit("");
-        // }
+        if (buttonPress == buttonEqual) {
+            this.numberTwoCalc = Float.parseFloat(this.textOperation.getText());
 
+            switch (this.operation) {
+            case "+":
+                textOperation.setText(quitZero(this.numberOneCalc + this.numberTwoCalc));
+                break;
+            case "-":
+                textOperation.setText(quitZero(this.numberOneCalc - this.numberTwoCalc));
+                break;
+            case "*":
+                textOperation.setText(quitZero(this.numberOneCalc * this.numberTwoCalc));
+                break;
+            case "/":
+                if (numberTwoCalc == 0) {
+                    this.textOperation.setText("Math ERROR");
+                } else {
+                    textOperation.setText(quitZero(this.numberOneCalc / this.numberTwoCalc));
+                }
+                break;
+            case "%":
+                textOperation.setText(quitZero((this.numberOneCalc * 100) / numberTwoCalc));
+                break;
+            default:
+                textOperation.setText("Syntax Error");
+            }
+        }
         if (buttonPress == buttonPercentage) {
-            addDigit("%");
+            this.numberOneCalc = Float.parseFloat(this.textOperation.getText());
+            this.operation = "%";
+            this.textOperation.setText("");
         }
 
         if (buttonPress == buttonAllClear) {
             textOperation.setText("0");
-            textResult.setText("0");
         }
 
         if (buttonPress == buttonLeftParenthesis) {
@@ -236,19 +282,27 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         }
 
         if (buttonPress == buttonDivision) {
-            addDigit("/");
+            this.numberOneCalc = Float.parseFloat(this.textOperation.getText());
+            this.operation = "/";
+            this.textOperation.setText("");
         }
 
         if (buttonPress == buttonMultiplication) {
-            addDigit("*");
+            this.numberOneCalc = Float.parseFloat(this.textOperation.getText());
+            this.operation = "*";
+            this.textOperation.setText("");
         }
 
         if (buttonPress == buttonAdd) {
-            addDigit("+");
+            this.numberOneCalc = Float.parseFloat(this.textOperation.getText());
+            this.operation = "+";
+            this.textOperation.setText("");
         }
 
         if (buttonPress == buttonSubtract) {
-            addDigit("-");
+            this.numberOneCalc = Float.parseFloat(this.textOperation.getText());
+            this.operation = "-";
+            this.textOperation.setText("");
         }
 
     }
@@ -262,7 +316,6 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     private Panel bottomPanel;
 
     private Label textOperation;
-    private Label textResult;
 
     private Button numberOne;
     private Button numberTwo;
@@ -287,5 +340,10 @@ public class CalculadoraGUI extends Frame implements ActionListener {
     private Button buttonSubtract;
 
     private Fonts fontM;
+    private Calculadora op;
+
+    private float numberOneCalc;
+    private float numberTwoCalc;
+    private String operation;
 
 }

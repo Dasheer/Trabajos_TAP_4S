@@ -2,7 +2,6 @@ package Proyecto.Juego;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
 import javax.swing.*;
 
 public class TicTacToe extends JFrame implements ActionListener {
@@ -21,10 +20,8 @@ public class TicTacToe extends JFrame implements ActionListener {
         this.getContentPane().setBackground(new Color(50, 50, 50));
         this.setLayout(new BorderLayout());
         this.setVisible(true);
-
         this.add(topPanel, BorderLayout.NORTH);
         this.add(bottomPanel);
-
         game = new GameTicTacToe(true, false);
     }
 
@@ -33,21 +30,19 @@ public class TicTacToe extends JFrame implements ActionListener {
         main = new JMenu("Juego");
         resetGame = new JMenuItem("Reiniciar");
         exitG = new JMenuItem("Salir");
-
         this.setJMenuBar(menuGame);
         menuGame.add(main);
         main.add(resetGame);
         main.addSeparator();
         main.add(exitG);
-
         resetGame.addActionListener(this);
+        exitG.addActionListener(this);
     }
 
     public void topPanel() {
         topPanel = new JPanel();
         topPanel.setLayout(new BorderLayout());
         topPanel.setBounds(0, 0, 600, 75);
-
         label = new JLabel();
         label.setBackground(new Color(133, 193, 233));
         label.setForeground(new Color(236, 240, 241));
@@ -55,9 +50,7 @@ public class TicTacToe extends JFrame implements ActionListener {
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setText("Tic Tac Toe");
         label.setOpaque(true);
-
         topPanel.add(label, BorderLayout.NORTH);
-
     }
 
     public void bottomPanel() {
@@ -80,7 +73,6 @@ public class TicTacToe extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         Object onPress = e.getSource();
         for (int i = 0; i < buttons.length; i++) {
             if (onPress == buttons[i]) {
@@ -118,10 +110,13 @@ public class TicTacToe extends JFrame implements ActionListener {
             }
         }
 
+        if (onPress == exitG) {
+            dispose();
+        }
+
         if (onPress == resetGame) {
             resetGame();
         }
-
     }
 
     public void resetGame() {
@@ -142,7 +137,6 @@ public class TicTacToe extends JFrame implements ActionListener {
     private JMenu main;
     private JMenuItem resetGame;
     private JMenuItem exitG;
-    private Random random;
     private JPanel topPanel;
     private JPanel bottomPanel;
     private JLabel label;
