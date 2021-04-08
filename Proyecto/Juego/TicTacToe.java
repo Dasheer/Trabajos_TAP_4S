@@ -132,7 +132,6 @@ public class TicTacToe extends JFrame implements ActionListener {
         new TicTacToe();
     }
 
-    // Implementación de los Windgets
     private JMenuBar menuGame;
     private JMenu main;
     private JMenuItem resetGame;
