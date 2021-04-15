@@ -97,6 +97,17 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         numberNine = new Button("\u0039");
         numberZero = new Button("\u0030");
 
+        numberOne.setBackground(new Color(174, 214, 241));
+        numberTwo.setBackground(new Color(174, 214, 241));
+        numberThree.setBackground(new Color(174, 214, 241));
+        numberFour.setBackground(new Color(174, 214, 241));
+        numberFive.setBackground(new Color(174, 214, 241));
+        numberSix.setBackground(new Color(174, 214, 241));
+        numberSeven.setBackground(new Color(174, 214, 241));
+        numberEight.setBackground(new Color(174, 214, 241));
+        numberNine.setBackground(new Color(174, 214, 241));
+        numberZero.setBackground(new Color(174, 214, 241));
+
         buttonPoint = new Button(".");
         buttonEqual = new Button("\u003D");
         buttonPercentage = new Button("\u0025");
@@ -107,6 +118,9 @@ public class CalculadoraGUI extends Frame implements ActionListener {
         buttonMultiplication = new Button("\u00d7");
         buttonAdd = new Button("\u002B");
         buttonSubtract = new Button("\u2212");
+
+        buttonAllClear.setBackground(new Color(241, 174, 174));
+        buttonDelete.setBackground(new Color(241, 174, 174));
 
         bottomPanel.add(buttonAllClear);
         bottomPanel.add(buttonDelete);
@@ -150,7 +164,7 @@ public class CalculadoraGUI extends Frame implements ActionListener {
             }
 
             public void mouseExited(MouseEvent e) {
-                buttonType.setBackground(UIManager.getColor("control"));
+                buttonType.setBackground(new Color(174, 214, 241));
                 buttonType.setForeground(Color.BLACK);
             }
         });

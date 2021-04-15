@@ -1,0 +1,10 @@
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\bin\Debug\Calculadora.exe.config
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\bin\Debug\Calculadora.exe
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\bin\Debug\Calculadora.pdb
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.csprojAssemblyReference.cache
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.Calculadora.resources
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.exe
+D:\VSCode\Trabajos_Tap\Ejercicios\TAP_4to\Ejercicios\Csharp\Calculadora\obj\Debug\Calculadora.pdb
