@@ -55,6 +55,7 @@ namespace Practica1
             // buttonAllClear
             // 
             this.buttonAllClear.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonAllClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAllClear.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAllClear.Location = new System.Drawing.Point(8, 75);
             this.buttonAllClear.Name = "buttonAllClear";
@@ -66,7 +67,8 @@ namespace Practica1
             // 
             // numberSeven
             // 
-            this.numberSeven.BackColor = System.Drawing.Color.LightBlue;
+            this.numberSeven.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberSeven.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberSeven.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberSeven.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberSeven.Location = new System.Drawing.Point(8, 131);
@@ -79,7 +81,8 @@ namespace Practica1
             // 
             // numberFour
             // 
-            this.numberFour.BackColor = System.Drawing.Color.LightBlue;
+            this.numberFour.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberFour.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberFour.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberFour.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberFour.Location = new System.Drawing.Point(8, 187);
@@ -92,7 +95,8 @@ namespace Practica1
             // 
             // numberOne
             // 
-            this.numberOne.BackColor = System.Drawing.Color.LightBlue;
+            this.numberOne.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberOne.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberOne.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberOne.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberOne.Location = new System.Drawing.Point(8, 243);
@@ -105,7 +109,8 @@ namespace Practica1
             // 
             // numberZero
             // 
-            this.numberZero.BackColor = System.Drawing.Color.LightBlue;
+            this.numberZero.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberZero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberZero.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberZero.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberZero.Location = new System.Drawing.Point(8, 299);
@@ -118,6 +123,7 @@ namespace Practica1
             // 
             // buttonPoint
             // 
+            this.buttonPoint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPoint.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPoint.Location = new System.Drawing.Point(64, 299);
             this.buttonPoint.Name = "buttonPoint";
@@ -129,7 +135,8 @@ namespace Practica1
             // 
             // numberTwo
             // 
-            this.numberTwo.BackColor = System.Drawing.Color.LightBlue;
+            this.numberTwo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberTwo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberTwo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberTwo.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberTwo.Location = new System.Drawing.Point(64, 243);
@@ -142,7 +149,8 @@ namespace Practica1
             // 
             // numberFive
             // 
-            this.numberFive.BackColor = System.Drawing.Color.LightBlue;
+            this.numberFive.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberFive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberFive.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberFive.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberFive.Location = new System.Drawing.Point(64, 187);
@@ -155,7 +163,8 @@ namespace Practica1
             // 
             // numberEight
             // 
-            this.numberEight.BackColor = System.Drawing.Color.LightBlue;
+            this.numberEight.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberEight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberEight.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberEight.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberEight.Location = new System.Drawing.Point(64, 131);
@@ -169,6 +178,7 @@ namespace Practica1
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(64, 75);
             this.buttonDelete.Name = "buttonDelete";
@@ -180,6 +190,7 @@ namespace Practica1
             // 
             // buttonEqual
             // 
+            this.buttonEqual.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEqual.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEqual.Location = new System.Drawing.Point(120, 299);
             this.buttonEqual.Name = "buttonEqual";
@@ -191,7 +202,8 @@ namespace Practica1
             // 
             // numberThree
             // 
-            this.numberThree.BackColor = System.Drawing.Color.LightBlue;
+            this.numberThree.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberThree.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberThree.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberThree.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberThree.Location = new System.Drawing.Point(120, 243);
@@ -204,7 +216,8 @@ namespace Practica1
             // 
             // numberSix
             // 
-            this.numberSix.BackColor = System.Drawing.Color.LightBlue;
+            this.numberSix.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberSix.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberSix.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberSix.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberSix.Location = new System.Drawing.Point(120, 187);
@@ -217,7 +230,8 @@ namespace Practica1
             // 
             // numberNine
             // 
-            this.numberNine.BackColor = System.Drawing.Color.LightBlue;
+            this.numberNine.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.numberNine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.numberNine.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberNine.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numberNine.Location = new System.Drawing.Point(120, 131);
@@ -230,6 +244,7 @@ namespace Practica1
             // 
             // buttonScuareRoot
             // 
+            this.buttonScuareRoot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonScuareRoot.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonScuareRoot.Location = new System.Drawing.Point(120, 75);
             this.buttonScuareRoot.Name = "buttonScuareRoot";
@@ -241,6 +256,7 @@ namespace Practica1
             // 
             // buttonAdd
             // 
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(176, 299);
             this.buttonAdd.Name = "buttonAdd";
@@ -252,6 +268,7 @@ namespace Practica1
             // 
             // buttonSubtract
             // 
+            this.buttonSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSubtract.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubtract.Location = new System.Drawing.Point(176, 243);
             this.buttonSubtract.Name = "buttonSubtract";
@@ -263,6 +280,7 @@ namespace Practica1
             // 
             // buttonMultiplication
             // 
+            this.buttonMultiplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonMultiplication.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMultiplication.Location = new System.Drawing.Point(176, 187);
             this.buttonMultiplication.Name = "buttonMultiplication";
@@ -274,6 +292,7 @@ namespace Practica1
             // 
             // buttonDivision
             // 
+            this.buttonDivision.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDivision.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDivision.Location = new System.Drawing.Point(176, 131);
             this.buttonDivision.Name = "buttonDivision";
@@ -285,6 +304,7 @@ namespace Practica1
             // 
             // buttonPercentage
             // 
+            this.buttonPercentage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPercentage.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPercentage.Location = new System.Drawing.Point(176, 75);
             this.buttonPercentage.Name = "buttonPercentage";
@@ -296,7 +316,9 @@ namespace Practica1
             // 
             // textOperation
             // 
-            this.textOperation.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textOperation.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textOperation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textOperation.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textOperation.Location = new System.Drawing.Point(8, 9);
             this.textOperation.MaxLength = 10;
             this.textOperation.Multiline = true;
@@ -333,6 +355,7 @@ namespace Practica1
             this.Controls.Add(this.numberFour);
             this.Controls.Add(this.numberSeven);
             this.Controls.Add(this.buttonAllClear);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Calculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
