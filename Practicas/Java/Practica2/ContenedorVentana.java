@@ -8,11 +8,15 @@ import javax.swing.*;
 public class ContenedorVentana extends Canvas {
 
     public ContenedorVentana() {
+        // Se crea un canvas, se le asigna un tamaño y un color
         this.setVisible(true);
         this.setSize(400, 400);
         this.setBackground(new Color(174, 201, 241));
 
+        // Creamos una varibale boleeana
         isClicked = false;
+
+        // Se le asinga un tamaño al dibujo contenedor
         x = 10;
         y = 10;
         w = h = 50;
@@ -22,18 +26,24 @@ public class ContenedorVentana extends Canvas {
     @Override
     public void paint(Graphics g) {
 
+        // Se le agrea un color y se dibuja un rectangulo como contenedor
         g.setColor(new Color(203, 67, 53));
         g.fillRect(10, 10, 450, 450);
 
+        // Se le asigna un dolor y se dibuja un ovalo, junto dos String que se mostraran
+        // en el Frame
         g.setColor(new Color(98, 53, 203));
         g.fillOval(10, 500, 60, 60);
         g.drawString(alert, 10, 485);
         g.drawString(move, 10, 495);
+        // Mientras el dibujo este entre x, y, ya defino, se dibujara un cuadrado
         if (x >= 10 && x <= 420 && y >= 10 && y <= 420) {
             g.setColor(new Color(53, 180, 203));
             g.fillRect(x, y, w, h);
             g.drawString(text, x, y);
         } else {
+            // Si intenta salirse del contenedor, regresa a su posición inicial, y se pone
+            // una alerta
             setAlert("No es posible salir del contenedor");
             repaint();
             int posX = 10;

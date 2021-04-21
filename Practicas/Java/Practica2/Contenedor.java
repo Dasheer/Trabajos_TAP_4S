@@ -12,6 +12,8 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
     }
 
     public void initComponents() {
+
+        // Creación del frame
         this.setSize(600, 600);
         this.setVisible(true);
         this.setTitle("Juego");
@@ -19,12 +21,18 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // Creamos una variable contentWindow, la cual contiene los graficos ya
+        // definidos
         contentWindow = new ContenedorVentana();
+        // Le asignamos un tamaño al grafico, y le extraemos su altura y su ancho
         contentWindow.setBounds(0, 0, this.getWidth(), this.getHeight());
 
+        // Le aplicamos las acciones que realiza mientras este dentro de la ventana
         contentWindow.addMouseListener(this);
         contentWindow.addMouseMotionListener(this);
         contentWindow.addKeyListener(this);
+
+        // Agregamos la ventana al Frame
         this.add(contentWindow);
     }
 
@@ -36,6 +44,8 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        // Cunado isClicked sea falso, se obtiene las coordenadas donde esta el mouse, y
+        // le asignamos una alerta, por ultimo este se repinta en el frame
         if (!contentWindow.isClicked()) {
             contentWindow.setX(e.getX());
             contentWindow.setY(e.getY());
@@ -46,6 +56,8 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
 
     @Override
     public void mouseMoved(MouseEvent e) {
+        // Cuando estemos moviendo el mause, muestra las coordenadas donde esté,
+        // mientras sea dentro del Frame
         contentWindow.setMove("Moviendo a: [" + e.getX() + "," + e.getY() + "]");
         contentWindow.repaint();
 
@@ -53,6 +65,8 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        // cuando contentWindo sea clickeado, se le asigna las coordenadas donde se
+        // movió por ultima vez, y se le extrae las coordenadas de este mismo
         if (contentWindow.isClicked()) {
             contentWindow.setX(e.getX());
             contentWindow.setY(e.getY());
@@ -67,12 +81,14 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        // Cuando el mouse entre en el Frame, se le asigna una alerta de Iniciando
         contentWindow.setAlert("Iniciando");
         contentWindow.repaint();
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        // Cuando el mouse salga del Frame, se le asigna una alerta de Saliendo
         contentWindow.setAlert("Saliendo");
         contentWindow.repaint();
 
@@ -80,12 +96,15 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
 
     @Override
     public void mousePressed(MouseEvent e) {
+        // Cuando el mouse este presionado en el Frame, se le asigna una alerta de
+        // Presionado
         contentWindow.setAlert("Presionado");
         contentWindow.repaint();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        // Se actualiza el cubo, y se le renombra como "Sr. Cubo"
         contentWindow.setAlert("Soy el Sr. Cubo");
         contentWindow.repaint();
     }
@@ -93,6 +112,8 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
     @Override
     public void keyPressed(KeyEvent e) {
 
+        // Mientres el cubo este dentro del contenedor sera posible mover con las letras
+        // del teclado A, W, S, D
         if (!contentWindow.isClicked()) {
             switch (e.getKeyChar()) {
             case 'd':
