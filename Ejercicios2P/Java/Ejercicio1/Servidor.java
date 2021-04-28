@@ -23,12 +23,12 @@ public class Servidor {
             switch (line) {
             case "hola":
                 System.out.println("Me está saludando....");
-                out.println("Kon'nichiwa");
+                out.println("Hola!");
                 out.flush();
                 break;
             case "adios":
                 System.out.println("Ya te vas?");
-                out.println("Sayonara");
+                out.println("Adios!");
                 out.flush();
                 break;
             case "cual es mi calificacion?":
