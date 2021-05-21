@@ -1,8 +1,18 @@
-package Practicas.Java.Practica1;
+package practicas1p.java.practica1;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class CalculadoraGUI extends Frame implements ActionListener {
 
@@ -254,32 +264,32 @@ public class CalculadoraGUI extends Frame implements ActionListener {
             this.numberTwoCalc = Float.parseFloat(this.textOperation.getText());
 
             switch (this.operation) {
-            case "+":
-                textOperation.setText(quitZero(this.numberOneCalc + this.numberTwoCalc));
-                break;
-            case "-":
-                textOperation.setText(quitZero(this.numberOneCalc - this.numberTwoCalc));
-                break;
-            case "*":
-                textOperation.setText(quitZero(this.numberOneCalc * this.numberTwoCalc));
-                break;
-            case "/":
-                if (numberTwoCalc == 0) {
-                    this.textOperation.setText("Math ERROR");
-                } else {
-                    textOperation.setText(quitZero(this.numberOneCalc / this.numberTwoCalc));
-                }
-                break;
-            case "%":
-                textOperation.setText(quitZero((this.numberOneCalc * 100) / numberTwoCalc));
-                break;
+                case "+":
+                    textOperation.setText(quitZero(this.numberOneCalc + this.numberTwoCalc));
+                    break;
+                case "-":
+                    textOperation.setText(quitZero(this.numberOneCalc - this.numberTwoCalc));
+                    break;
+                case "*":
+                    textOperation.setText(quitZero(this.numberOneCalc * this.numberTwoCalc));
+                    break;
+                case "/":
+                    if (numberTwoCalc == 0) {
+                        this.textOperation.setText("Math ERROR");
+                    } else {
+                        textOperation.setText(quitZero(this.numberOneCalc / this.numberTwoCalc));
+                    }
+                    break;
+                case "%":
+                    textOperation.setText(quitZero((this.numberOneCalc * 100) / numberTwoCalc));
+                    break;
 
-            case "\u221A":
-                textOperation.setText(Double.toString((Math.sqrt(this.numberTwoCalc))));
-                break;
+                case "\u221A":
+                    textOperation.setText(Double.toString((Math.sqrt(this.numberTwoCalc))));
+                    break;
 
-            default:
-                textOperation.setText("Syntax Error");
+                default:
+                    textOperation.setText("Syntax Error");
             }
         }
         if (buttonPress == buttonPercentage) {

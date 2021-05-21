@@ -1,11 +1,23 @@
-package Practicas.Java.Practica3;
+package practicas1p.java.practica3;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.io.InputStream;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
-import javax.swing.*;
-import java.net.*;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class Consultador extends JFrame implements ActionListener {
 

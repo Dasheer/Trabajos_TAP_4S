@@ -1,9 +1,10 @@
-package Practicas.Java.Practica3;
+package practicas1p.java.practica3;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Font;
 
-import jdk.jshell.Diag;
+import javax.swing.JDialog;
+import javax.swing.JTextArea;
 
 public class Ayuda extends JDialog {
 

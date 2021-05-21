@@ -1,4 +1,4 @@
-package Practicas.Java.Practica1;
+package practicas1p.java.practica1;
 
 import java.awt.Font;
 import java.io.InputStream;

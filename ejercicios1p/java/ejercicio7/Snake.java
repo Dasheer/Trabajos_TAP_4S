@@ -9,6 +9,8 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import ejercicios1p.java.ejercicio5.Contenedor;
+
 public class Snake extends Frame implements MouseListener, MouseMotionListener, KeyListener {
 
     /**
