@@ -1,13 +1,22 @@
-package Ejercicios.Java.bloc_notas;
+package ejercicios1p.java.bloc_notas;
 
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import java.awt.FlowLayout;
-import java.awt.event.*;
-import java.awt.*;
 
 public class BlocNota extends Frame implements ActionListener {
 

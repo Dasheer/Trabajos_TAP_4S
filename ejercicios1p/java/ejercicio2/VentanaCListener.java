@@ -1,13 +1,15 @@
-package Ejercicios.Java.ejercicio2;
+package ejercicios1p.java.ejercicio2;
 
-import java.awt.TextField;
-import java.awt.Frame;
 import java.awt.BorderLayout;
 import java.awt.Button;
+import java.awt.Frame;
 import java.awt.Label;
 import java.awt.TextArea;
-
-import java.awt.event.*;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class VentanaCListener extends Frame implements ActionListener {
 

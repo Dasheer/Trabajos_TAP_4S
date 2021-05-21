@@ -1,9 +1,13 @@
-package Ejercicios.Java.ejercicio7;
+package ejercicios1p.java.ejercicio7;
 
 import java.awt.Frame;
-import java.awt.event.*;
-
-import ejercicios.ejercicio5.Contenedor;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Snake extends Frame implements MouseListener, MouseMotionListener, KeyListener {
 
@@ -97,26 +101,26 @@ public class Snake extends Frame implements MouseListener, MouseMotionListener, 
         System.out.println("Presionando " + arg0.getKeyChar());
         if (!obj_pintable.isClicked()) {
             switch (arg0.getKeyChar()) {
-            case 'd':
-            case 'D':
-                obj_pintable.setX(obj_pintable.getX() + 1);
+                case 'd':
+                case 'D':
+                    obj_pintable.setX(obj_pintable.getX() + 1);
 
-                break;
-            case 'a':
-            case 'A':
-                obj_pintable.setX(obj_pintable.getX() - 1);
-                break;
-            case 'w':
-            case 'W':
-                obj_pintable.setY(obj_pintable.getY() - 1);
+                    break;
+                case 'a':
+                case 'A':
+                    obj_pintable.setX(obj_pintable.getX() - 1);
+                    break;
+                case 'w':
+                case 'W':
+                    obj_pintable.setY(obj_pintable.getY() - 1);
 
-                break;
-            case 's':
-            case 'S':
-                obj_pintable.setY(obj_pintable.getY() + 1);
-                break;
-            default:
-                break;
+                    break;
+                case 's':
+                case 'S':
+                    obj_pintable.setY(obj_pintable.getY() + 1);
+                    break;
+                default:
+                    break;
             }
             obj_pintable.repaint();
         }

@@ -1,13 +1,16 @@
-package Ejercicios.Java.bloc_notas;
+package ejercicios1p.java.bloc_notas;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.Panel;
-import java.awt.event.*;
-import java.io.InputStream;
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JComboBox;
-import javax.swing.border.Border;
 
 public class Fonts extends Frame implements ActionListener {
     /**

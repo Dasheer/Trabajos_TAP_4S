@@ -1,8 +1,10 @@
-package Ejercicios.Java.ejercicio5;
+package ejercicios1p.java.ejercicio5;
 
 import java.awt.Frame;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Pantalla extends Frame implements MouseListener {
 

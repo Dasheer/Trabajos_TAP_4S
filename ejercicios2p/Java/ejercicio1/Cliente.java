@@ -1,7 +1,11 @@
-package Ejercicios2P.Java.Ejercicio1;
+package ejercicios2p.Java.ejercicio1;
 
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class Cliente {
     Socket socket;

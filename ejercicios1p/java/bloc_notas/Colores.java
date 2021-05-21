@@ -1,11 +1,13 @@
-package Ejercicios.Java.bloc_notas;
+package ejercicios1p.java.bloc_notas;
 
-import java.awt.event.*;
-
-import javax.swing.BoxLayout;
-import javax.swing.border.Border;
-
-import java.awt.*;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Panel;
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Colores extends Frame implements ActionListener {
 

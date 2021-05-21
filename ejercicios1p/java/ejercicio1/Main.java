@@ -1,9 +1,10 @@
+package ejercicios1p.java.ejercicio1;
 //package ejercicios.ejercicio1;
 
 //Profe, yo lo puedo ejecutar sin necesidad de poner el package
-
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Main extends Frame {
 
