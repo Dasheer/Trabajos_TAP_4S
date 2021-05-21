@@ -1,9 +1,14 @@
-package Practicas.Java.Practica2;
+package practicas1p.java.practica2;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.JFrame;
 
 public class Contenedor extends JFrame implements ActionListener, MouseMotionListener, MouseListener, KeyListener {
 
@@ -116,28 +121,28 @@ public class Contenedor extends JFrame implements ActionListener, MouseMotionLis
         // del teclado A, W, S, D
         if (!contentWindow.isClicked()) {
             switch (e.getKeyChar()) {
-            case 'd':
-            case 'D':
-                contentWindow.setAlert("Pressed d");
-                contentWindow.setX(contentWindow.getX() + 10);
+                case 'd':
+                case 'D':
+                    contentWindow.setAlert("Pressed d");
+                    contentWindow.setX(contentWindow.getX() + 10);
 
-                break;
-            case 'a':
-            case 'A':
-                contentWindow.setAlert("Pressed a");
-                contentWindow.setX(contentWindow.getX() - 10);
-                break;
-            case 'w':
-            case 'W':
-                contentWindow.setAlert("Pressed w");
-                contentWindow.setY(contentWindow.getY() - 10);
+                    break;
+                case 'a':
+                case 'A':
+                    contentWindow.setAlert("Pressed a");
+                    contentWindow.setX(contentWindow.getX() - 10);
+                    break;
+                case 'w':
+                case 'W':
+                    contentWindow.setAlert("Pressed w");
+                    contentWindow.setY(contentWindow.getY() - 10);
 
-                break;
-            case 's':
-            case 'S':
-                contentWindow.setAlert("Pressed s");
-                contentWindow.setY(contentWindow.getY() + 10);
-                break;
+                    break;
+                case 's':
+                case 'S':
+                    contentWindow.setAlert("Pressed s");
+                    contentWindow.setY(contentWindow.getY() + 10);
+                    break;
 
             }
             contentWindow.repaint();

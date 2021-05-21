@@ -1,9 +1,8 @@
-package Practicas.Java.Practica2;
+package practicas1p.java.practica2;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import javax.swing.*;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class ContenedorVentana extends Canvas {
 
