@@ -13,7 +13,7 @@
        android:layout_margin="5dp"
        android:layout_weight="1"
        android:gravity="center"
-       android:text="Registered Users"
+       android:text="@string/registered_users"
        android:textSize="18sp"
        android:textColor="@color/text_secondary"/>
 

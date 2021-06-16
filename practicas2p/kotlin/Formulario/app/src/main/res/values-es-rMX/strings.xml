@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="name">Nombre</string>
+    <string name="surname">Apellido</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="signup">Registrarse</string>
+    <string name="do_you_have_an_account_login">¿Tiene una cuenta? Inicia Sesión</string>
+    <string name="registered_users">Usuarios Registrados</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="show">Mostrar</string>
+    <string name="exit">Salir</string>
+    <string name="hello_user">Hola! Usuario</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="forgot_password">¿Contraseña olvidada?</string>
+    <string name="new_user_register_now">¿Nuevo Usuario? Regístrate Ahora</string>
+</resources>

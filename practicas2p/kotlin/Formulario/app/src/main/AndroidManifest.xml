@@ -11,9 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Formulario">
-        <activity android:name=".ui.view.EditAccountsActivity"></activity>
+        <activity android:name=".ui.view.EditAccountsActivity"/>
         <activity android:name=".ui.view.ShowAccountsActivity" />
-        <activity android:name=".ui.view.EditAccountActivity" />
         <activity android:name=".ui.view.SignUpActivity" />
         <activity android:name=".ui.view.LoginActivity">
             <intent-filter>

@@ -23,14 +23,15 @@
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="Edit"
-            android:textSize="14sp"
+            android:text="@string/edit"
+            android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0"
-            app:layout_constraintWidth_percent=".25" />
+            app:layout_constraintWidth_percent=".25"
+            tools:ignore="SmallSp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mbDelete"
@@ -38,8 +39,8 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/red_500"
-            android:text="Delete"
-            android:textSize="14sp"
+            android:text="@string/delete"
+            android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,8 @@
             app:layout_constraintStart_toEndOf="@+id/mbEdit"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0"
-            app:layout_constraintWidth_percent=".25" />
+            app:layout_constraintWidth_percent=".25"
+            tools:ignore="SmallSp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mbShow"
@@ -55,8 +57,8 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/teal_500"
-            android:text="Show"
-            android:textSize="14sp"
+            android:text="@string/show"
+            android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +66,8 @@
             app:layout_constraintStart_toEndOf="@+id/mbDelete"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0"
-            app:layout_constraintWidth_percent=".25" />
+            app:layout_constraintWidth_percent=".25"
+            tools:ignore="SmallSp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mbExit"
@@ -72,8 +75,8 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/amber_500"
-            android:text="Exit"
-            android:textSize="14sp"
+            android:text="@string/exit"
+            android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +84,8 @@
             app:layout_constraintStart_toEndOf="@+id/mbShow"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0"
-            app:layout_constraintWidth_percent=".25" />
+            app:layout_constraintWidth_percent=".25"
+            tools:ignore="SmallSp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -91,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:text="Hello! User"
+        android:text="@string/hello_user"
         android:textColor="@color/text_primary"
         android:textSize="32sp"
         android:paddingBottom="10dp"
@@ -109,7 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/atvWelcome" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
